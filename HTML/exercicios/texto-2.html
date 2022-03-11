@@ -1,0 +1,56 @@
+<h1>QUEBRAS DE LINHA</h1>
+<p>
+    Utilização da tag 'br'. <br>
+    O Prof utiliza o 'br/'; botei aqui, mas não saquei qual é. <br />
+    Depois dessa, entra a 'hr'. <hr>
+    O 'hr' insere essa linha aí em cima. <br>
+</p>
+<h1>MARCAÇÕES DE SEMÂNTICA</h1>
+<p>
+    Temos as tags <strong>'strong'</strong> e <em>'em'</em> (de "emphasize", enfatizar -> ênfase). <br>
+    Apesar de a tag, por padrão, formatar 'strong' como <b>negrito</b>, e 'em' como <i>itálico</i>, 
+    a diferença é que você pode definir um estilo para as tags, usando CS - ao contrário do 'b/i'.
+</p>
+<p>
+    Entrando no bloco das citações, tem, primeiro, o 'blockquote'. Fica mais ou menos assim: <br>
+    <blockquote cite="https://twitter.com/medoedeliriobr">Twitter do Medo e Delírio em Brasília</blockquote> <br>
+    Provaelmente esse funciona pras citações gigantes. Sinceramente não entendi por que o link. 
+    Vou meter uma com blocão de lorem ipsum. E sem o 'br' depois. <br>
+    <blockquote>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor lorem et finibus sodales. 
+        Cras ut congue neque. Morbi risus sem, porta volutpat quam sit amet, tincidunt feugiat enim. 
+        Nulla nec libero non erat condimentum accumsan. Donec id urna viverra, eleifend magna vel, c
+        onsectetur mauris. Phasellus maximus leo non dui convallis auctor. Duis a quam aliquet, posuere 
+        justo et, semper enim. Vestibulum vitae posuere diam. Sed vel bibendum nisi. Ut ut lacus mattis, 
+        volutpat quam quis, porta dui. Sed at efficitur ex, ut dictum felis. <br>
+        Ut sollicitudin mi sit amet enim ornare convallis. Nam mattis gravida lorem. Vivamus imperdiet 
+        est sed velit vehicula, nec bibendum massa efficitur. Cras convallis luctus augue, placerat 
+        feugiat mauris sagittis vel. Donec fringilla mi eu felis mollis, non dignissim orci vehicula. 
+        Cras quis metus ultricies arcu accumsan varius. Vestibulum elementum leo tincidunt, interdum nisl 
+        at, volutpat nibh. Aenean lacinia magna non tristique ullamcorper. Vivamus dapibus.  
+    </blockquote>
+    Falei que não ia botar 'br' depois, mas coloquei um no meio, porque 150 palavras :) <br>
+    Enfim, próximo bloco de citação é com a tag 'q'. <br>
+    No Medo e Delírio emm Brasília, o host Cristiano Botafogo diz, frequentemente, que <q>Se filho da puta voasse, não veríamos mais a luz do sol.</q> <br>
+    Ou seja: a tag 'q' coloca a citação entre aspas.
+</p>
+<h1>OUTRAS TAGS</h1>
+<p>
+    - tags de abraviação ('abbr'), outra tag para citação ('cite'), definição ('dfn'), endereço ('address'), correção ('del' + 'ins'), strike ('s') <br>
+    <abbr title="Professor">Prof</abbr> João da Silva em seu livro <cite>200 Páginas Com Muito Conteúdo</cite>
+    definiu que <dfn>Café de qualidade</dfn> é todo aquele tomado sem açúcar. <br>
+    Visite a cafeteria que o <abbr title="Ilustríssimo">Ilmo</abbr> <abbr title="Professor">Prof</abbr>
+    frequenta diariamente: <address>Rua da Alameda, <abbr preposition="sem">s/</abbr><abbr word="número">n<sup>o</sup></abbr></address> <br>
+    Na <del>cafeteira</del> <ins>cafeteria</ins> você encontra diversos tipos de café <s>e chás</s>. <br>
+
+    Visualmente, parece bobagem. Principalmente o strike, poque é, essencialmente, um tachado.
+    Mas, são tags que interpretadores para pessoas com deficiência podem apresentar outras formas 
+    de leitura. Logo, como diz o título, são tags de semânticaa, mas no caso específico, é pra melhorar 
+    a semântica do interpretador. <br>
+    No caso particular do strike, sinaliza que aquela informação 
+    está inválida (o 'del' mostra que "corrigiu") <br>
+    E, visualmente falando, essas tags também podem receber um estilo CSS. Então, não seja preguiçoso / 
+    chorão, e escreve o teu código com uma semântica decente, de forma a facilitar - e incluir -  os
+    amiguinhos com deficiência. <br>
+    Ah, dá uma olhada no código do endereço também, porque eu fiz um monte de inserções também. <br>
+</p>
