@@ -8,19 +8,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ÍNDICE DE EXEMPLOS E ESTUDOS</title>
+    <style>
+        #conteudo{
+            padding: 30px 0px;
+        }
+    </style>
 </head>
 <body>
-    <header>Exercícios HTML</header>
+    <header> <h1> Exercícios HTML </h1> </header>
     <nav>
-        <a href="exercicios/teste.html">00 - Teste</a> <!-- No arquivo target, eu inseri o código base de html5; baseado no que o Professor fala na aula, no momento de configurar a tag script ali embaixo, acho que eu não deveria ter feito isso.-->
+        <a href="exercicios/teste.html">00 - Teste</a> ||  <!-- No arquivo target, eu inseri o código base de html5; baseado no que o Professor fala na aula, no momento de configurar a tag script ali embaixo, acho que eu não deveria ter feito isso.-->
+        <a href="exercicios/texto-1.html">01 - Texto (parte 1)</a>
     </nav>
     <section id="conteudo">
 
     </section>
     <footer>
-        <br>
         Curso de Web Moderno - Cod3r <br>
         Aluno: Rodrigo Yung <br>
     </footer>
+    <!--Abaixo, temos um script. Ele funciona da seguinte forma:-->
+    <!--1) ele "escaneia" os links (representados pela tag <a>) -->
+    <!--2) intercepta o clique (com a função onClick) -->
+    <!--2.1) o preventDefault impede que a página navegue, que é o comportamento padrão quando você clica -->
+    <!--3) puxa o conteúdo através do getElementById -->
+    <!--4) faz uma requisição ajax em cima do atributo href (usando o fetch)-->
+    <!--4.1) o fetch, na verdade, junto com o forEach, associa uma função a cada um dos links -->
+    <!--5) o primeiro then puxa o valor textual de dentro da requisição -->
+    <!--6) o segundo then joga o conteúdo html pra dentro da section -->
+    <!-- em 11/03, isso ainda não ficou muito claro. -->
+    <script>
+        document.querySelectorAll('a').forEach(link =>{
+            link.onclick = function(e){
+                e.preventDefault()
+                const conteudo = document.getElementById('conteudo')
+                fetch(link.href)
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+            }
+        })
+    </script>
 </body>
 </html>
