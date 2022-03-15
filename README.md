@@ -1,6 +1,9 @@
 # estudos-web
 Repo criado para acompanhar os meus estudos em desenvolvimento web <br> <br>
-<h1> VERSÃO 0.0.2 (11/03/2022 16:45h) </h1>
+<h1> VERSÃO 0.0.3 (14/03/2022 16:45h) </h1>
+- Criados os arquivos desafio.html, listas.html, listaAninhada.html, além do arquivo.txt com o CSS feito pelo professor <br>
+- Data da versão diferente do commit por questão de tempo <br>
+<h3> VERSÃO 0.0.2 (11/03/2022 16:45h) </h3>
 - Criado o arquivo texto-2.html, com mais tags de texto <br>
 - Entendi um erro por acaso. Comentário adicionado em index.html <br>
  <h3> VERSÃO 0.0.1 (11/03/2022 12:25p.m.) </h3>
