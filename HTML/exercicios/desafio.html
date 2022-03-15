@@ -1,0 +1,155 @@
+<style>
+    .tree * {
+    list-style-type: none;
+}
+
+.tree li a {
+    color: #222;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+.tree ul {
+    padding-left: 25px;
+}
+
+ul.tree, .tree li {
+    padding-left: 0px;
+    padding-top: 5px;
+}
+
+ul.tree, ul.tree ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+} 
+
+ul.tree ul {
+    margin-left: 10px;
+}
+
+ul.tree li {
+    margin: 0;
+    margin: 0 9px;
+    padding: 0 7px;
+    border-left:1px solid rgb(100,100,100);
+
+}
+
+ul.tree li:last-child {
+    border-left:none;
+}
+
+ul.tree li:before {
+    position:relative;
+    top:-0.3em;
+    height:1em;
+    width:12px;
+    color:white;
+    border-bottom:1px solid rgb(100,100,100);
+    content:"";
+    display:inline-block;
+    left:-7px;
+}
+
+ul.tree li:last-child:before {
+    border-left:1px solid rgb(100,100,100);   
+}
+</style>
+<H1>DESAFIO DO PROFESSOR DO CURSO</H1>
+<p>
+    A proposta é uma lista aninhada, com elementos "retráteis". <br>
+    Ou seja: tem a lista de tópicos, mas eles só expandem quando você clica. <br>
+    Então, olha no código, porque o processo vai ser todo comentado.
+    O desafio foi escrito em um arquivo separado (desafio.html)
+</p>
+<p>
+    14/03/2022: atividade feita em conjunto com a aula 219.<br>
+    O código escrito aqui funciona, mas, não funciona dentro do server http. <br>
+    Porém, se você abrir a página individualmente no browser, o código funciona.
+</p>
+
+<h2>TOP 3 - JOGOS FAVORITOS DOS CONSOLES</h2>
+<!--Primeiro de tudo, eu montei a lista. 
+Depois, eu dei ctrl+c ctrl+v do css que foi proposta (http://files.cod3r.com.br/curso-web/tree.css)
+Então, inseri o código e comecei a organizar.
+Mas, antes, achei melhor ter o desafio separado, então, montei um arquivo novo. -->
+<ul class="tree">
+    <li><span wm-folder>NINTENDO</span>
+        <ul>
+            <li><span wm-folder>NES</span> <!--incluída a tag span; o wm-folder é o nome do atributo
+                                            a partir daí, passemos pro JavaScript -->
+                <ul>
+                <li>MegaMan 6</li>
+                <li>Double Dribble</li>
+                <li>Final Fantasy</li>
+                </ul>
+            </li>
+            <li><span wm-folder>SNES</span>
+                <ul>
+                <li>Super Metroid</li>
+                <li>Mario Kart</li>
+                <li>Chrono Trigger</li>
+                </ul>
+            </li>
+            <li><span wm-folder>NINTENDO 64</span>
+                <ul>
+                <li>The Legend of Zelda: Ocarina of Time</li>
+                <li>Super Smash Bros.</li>
+                <li>International SuperStar Soccer 64</li>
+                </ul>
+            </li>
+            <li><span wm-folder>GAMEBOY / GAMEBOY COLOR</span>
+                <ul>
+                <li>Pokémon Gold</li>
+                <li>The Legend of Zelda: Link's Awakening DX</li>
+                <li>Pokemon TCG</li>
+                </ul>
+            </li>
+            <li><span wm-folder>GBA</span>
+                <ul>
+                <li>Final Fantasy Tactics Advance</li>
+                <li>Pokemon Emerald</li>
+                <li>Metroid Fusion</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><span wm-folder>SONY</span>
+        <ul>
+            <li><span wm-folder>PLAYSTATION</span>
+                <ul>
+                <li>Crash Team Racing</li>
+                <li>The King of Fighters '97</li>
+                <li>MegaMan X5</li>
+                </ul>
+            </li>
+            <li><span wm-folder>PLAYSTATION 2</span>
+                <ul>
+                <li>God of War</li>
+                <li>Dragon Ball Z: Budoukai Tenkaichi 3</li>
+                <li>Guitar Hero 3</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+<script> //document.querySelectorAll vai selecionar todos os elementos que estão com o nome indicado.
+        // no caso, é o 'wm-folder'; então, "para cada" folder, vai realizar uma função onclick, para
+        // abrir ou fechar os elementos dentro daquela função. no caso, como só certas linhas tem o nome
+        // da função, só essas linhas serão DIRETAMENTE afetadas pelo javascript
+    document.querySelectorAll('[wm-folder]').forEach(folder => {
+        folder.onclick = function(e){
+            /*uma vez escrita a função para capturar o clique, agora pracisa identificar o que tá "dentro"
+            então, vai usar a linha nextElementSibling, pra buscar a lista */
+            const ul = folder.nextElementSibling
+            const d = ul.style.display //isso vai armazenar o display atual da variável ul (none (invisível) ou block (visível))
+            ul.style.display = d === 'none' ? 'block' : 'none'
+            // ao clicar, se ul-blabla for igual a none, muda pra block; senão, muda pra none.
+            // ou seja: clicou. está invisível?
+            // se estiver invisível, torne visível
+            // se estiver visível, torne invisível
+        }
+    })
+</script>
