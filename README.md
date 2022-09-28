@@ -1,5 +1,6 @@
 # estudos-web
 Repo criado para acompanhar os meus estudos em desenvolvimento web <br> <br>
+Upload do arquivo estudos.rar, porque tô fazendo backup e não sei bem quando volto a pegar nisso. Então, limpando um pouco o PC.<br>
 <h1> VERSÃO 0.0.3 (14/03/2022 16:45h) </h1>
 - Criados os arquivos desafio.html, listas.html, listaAninhada.html, além do arquivo.txt com o CSS feito pelo professor <br>
 - Data da versão diferente do commit por questão de tempo <br>
